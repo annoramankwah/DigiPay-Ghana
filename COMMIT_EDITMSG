@@ -1,0 +1,10 @@
+Extend confirm dialog to link clicks, and confirm sign-out everywhere
+
+The confirm-dialog JS only ever intercepted <form> submissions, so
+data-confirm on a plain <a> (like every "Sign out" link) silently did
+nothing -- that's what the user was actually testing when reporting
+dialogs "still don't appear". Generalized the dialog to also intercept
+clicks on any a[data-confirm], and added a sign-out confirmation across
+admin/office/super-admin/student.
+
+Co-Authored-By: Claude Sonnet 5 <noreply@anthropic.com>
