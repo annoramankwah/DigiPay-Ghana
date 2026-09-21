@@ -1,0 +1,6 @@
+ALTER TABLE institutions
+  ADD COLUMN short_name VARCHAR(30) NULL AFTER name,
+  ADD COLUMN email VARCHAR(190) NULL AFTER short_name,
+  ADD COLUMN phone VARCHAR(30) NULL AFTER email,
+  ADD COLUMN address VARCHAR(255) NULL AFTER phone,
+  ADD COLUMN website VARCHAR(190) NULL AFTER address;
