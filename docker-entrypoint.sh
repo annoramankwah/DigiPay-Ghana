@@ -8,7 +8,7 @@ sed -i "s/:80>/:${PORT}>/" /etc/apache2/sites-available/000-default.conf
 
 echo "Waiting for the database to accept connections..."
 php -r '
-require "src/bootstrap.php";
+require "bootstrap.php";
 use App\Config\Database;
 $max = 30;
 for ($i = 0; $i < $max; $i++) {
