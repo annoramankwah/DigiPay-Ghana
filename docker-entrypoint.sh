@@ -26,10 +26,10 @@ exit(1);
 '
 
 echo "Running migrations..."
-php database/migrate.php
+php migrate.php
 
 echo "Seeding demo data (idempotent)..."
-php database/seed.php
+php seed.php
 
 # Belt-and-braces: whatever mix of MPM modules the base image shipped
 # with, force exactly one (prefork, required by mod_php) before starting.
